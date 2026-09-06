@@ -32,21 +32,31 @@ int main() {
         cin >> choice;
         switch (choice) {
             case 1:
-                cout << "Введите параметры v и f: ";
-                cin >> v >> f;
-                cout << "Длина волны = " << waveLength(v, f) << "\n";
+                cout << "\nВведите скорость распространения v (м/с): ";
+                cin >> v;
+                cout << "Введите частоту f (Гц): ";
+                cin >> f;
+                cout << "\nРЕЗУЛЬТАТ:\n";
+                cout << "Длина волны λ = " << waveLength(v, f) << " м\n";
                 break;
+                
             case 2:
-                cout << "Введите параметры lambda и T";
-                cin >> lambda >> T;
-                cout << "Скорость волны = " << waveSpeed(lambda, T) << "\n";
+                cout << "\nВведите длину волны λ (м): ";
+                cin >> lambda;
+                cout << "Введите период T (с): ";
+                cin >> T;
+                cout << "\nРЕЗУЛЬТАТ:\n";
+                cout << "Скорость волны v = " << waveSpeed(lambda, T) << " м/с\n";
                 break;
+                
             case 0:
-                cout << "Работа завершена.\n";
+                cout << "\nРабота завершена. До свидания!\n";
                 break;
+                
             default:
-                cout << "Такого пункта нет.\n";
+                cout << "\nОшибка: такого пункта нет. Попробуйте снова.\n";
         }
+    } while (choice != 0);
     } while (choice != 0);
     return 0;
 }
