@@ -7,11 +7,13 @@ using namespace std;
 
 // Длина волны
 double waveLength(double v, double f) {
+    if (f == 0) return 0;
     return v / f;
 }
 
 // Скорость волны
 double waveSpeed(double lambda, double T) {
+    if (T == 0) return 0;
     return lambda / T;
 }
 
@@ -42,7 +44,7 @@ int main() {
                 cin >> lambda;
                 cout << "Enter T (s): ";
                 cin >> T;
-                cout << "\nRESLIT:\n";
+                cout << "\nRESULT:\n";
                 cout << "Wave speed v = " << waveSpeed(lambda, T) << " m/s\n";
                 break;
                 
