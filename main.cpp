@@ -19,8 +19,10 @@ double waveSpeed(double lambda, double T) {
 
 // ===== Главная функция: меню =====
 int main() {
+    // Для русского языка
     SetConsoleOutputCP(CP_UTF8);
     SetConsoleCP(CP_UTF8);
+
     int choice;
     double v, f, lambda, T;
     do {
