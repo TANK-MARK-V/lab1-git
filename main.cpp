@@ -11,15 +11,22 @@ double waveLength(double v, double f) {
     return v / f;
 }
 
+// Скорость волны
+double waveSpeed(double lambda, double T) {
+    return lambda / T;
+}
+
 
 // ===== Главная функция: меню =====
 int main() {
     SetConsoleOutputCP(CP_UTF8);
+    SetConsoleCP(CP_UTF8);
     int choice;
-    double v, f, lam, T;
+    double v, f, lambda, T;
     do {
         cout << "\n=== Вариант 40: Расчёты для волн ===\n";
         cout << "1. Длина волны\n";
+        cout << "2. Скорость волны\n";
         cout << "0. Выход\n";
         cout << "Выберите пункт: ";
         cin >> choice;
@@ -28,6 +35,11 @@ int main() {
                 cout << "Введите параметры v и f: ";
                 cin >> v >> f;
                 cout << "Длина волны = " << waveLength(v, f) << "\n";
+                break;
+            case 2:
+                cout << "Введите параметры lambda и T";
+                cin >> lambda >> T;
+                cout << "Скорость волны = " << waveSpeed(lambda, T) << "\n";
                 break;
             case 0:
                 cout << "Работа завершена.\n";
