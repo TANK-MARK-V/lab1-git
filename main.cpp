@@ -24,7 +24,7 @@ int main() {
     int choice;
     double v, f, lambda, T;
     do {
-        cout << "\n** Калькулятор. Вариант 40 **\n";
+        cout << "\n=== Вариант 40: Калькулятор расчётов для волн ===\n";
         cout << "1. Длина волны\n";
         cout << "2. Скорость волны\n";
         cout << "0. Выход\n";
@@ -56,7 +56,6 @@ int main() {
             default:
                 cout << "\nОшибка: такого пункта нет. Попробуйте снова.\n";
         }
-    } while (choice != 0);
     } while (choice != 0);
     return 0;
 }
